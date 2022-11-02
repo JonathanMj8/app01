@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar transparent="true">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>     
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div id="containerb">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="5"><ion-button routerLink="/registration">Registrar<br>Período</ion-button></ion-col>
+        <ion-col size="5"><ion-button routerLink="/calendar">Consulta<br>Período</ion-button></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div id="containert">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="5"><ion-button (click)="presentPopover($event)">Días Fértiles</ion-button></ion-col>
+        <ion-col size="5"><ion-button (click)="presentPopover($event)">Información</ion-button></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+
+<!-- Esta parte del código es para mostrar un mensaje flotante -->
+<ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+  <ng-template>
+    <ion-content class="ion-padding">Proximamente</ion-content>
+  </ng-template>
+</ion-popover>
+</ion-content>

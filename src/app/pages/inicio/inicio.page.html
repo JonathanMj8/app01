@@ -1,45 +1,23 @@
-
-<ion-header no-border>
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar transparent="true">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Inicio de Sesión</ion-title>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>     
   </ion-toolbar>
 </ion-header>
-  <ion-content padding>
-    <ion-list>
-      <ion-item *ngFor="let c of componentes" [routerLink]=" c.redirectTo " detail>
-        <ion-icon [name]="c.icon" slot="start" ></ion-icon>
-        <ion-label>{{ c.name }}</ion-label>
-      </ion-item>
-    </ion-list>
-    <br>
-    
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-item lines="full">
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="text" required></ion-input>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" required></ion-input>
-        </ion-item>
-      </ion-card-header>
-      <ion-row class="ion-justify-content-center"> 
-        <ion-col size="3">
-          <ion-button type="submit" color="secondary"  size="default" (click)="Sign()" > Sign In</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-card-content>
-        Inicio de sesión
-      </ion-card-content>
-    </ion-card>
-  <form>
-    
-    
-  </form>
-</ion-content>
+ 
 
+<ion-content id="container" >
+
+  <h1>APP MUJER</h1>
+
+  <ion-button type="submit" routerLink="/login" > Comenzar</ion-button>
+  
+  <!--   <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]=" c.redirectTo " detail>
+      <ion-icon [name]="c.icon" slot="start"></ion-icon>
+      <ion-label>{{ c.name }}</ion-label>
+    </ion-item>
+  </ion-list> -->
+   
+</ion-content>

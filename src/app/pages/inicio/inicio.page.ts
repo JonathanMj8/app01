@@ -12,18 +12,28 @@ export class InicioPage implements OnInit {
   componentes: Componente[] = [
     {
       icon: 'baseball-outline',
-      name: 'Alert',
-      redirectTo: '/alert'
+      name: 'Login',
+      redirectTo: '/login'
     },
     {
       icon: 'logo-apple',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
+      name: 'Menu',
+      redirectTo: '/menu'
     },
     {
       icon: 'logo-apple',
-      name: 'Card',
-      redirectTo: '/card'
+      name: 'Registro',
+      redirectTo: '/registrar'
+    },
+    {
+      icon: 'logo-apple',
+      name: 'Periodo Probable',
+      redirectTo: '/periodo'
+    },
+    {
+      icon: 'logo-apple',
+      name: 'slider',
+      redirectTo: '/slider'
     },
   ];
  

@@ -1,0 +1,46 @@
+ion-content {
+    --background: url('/assets/fondo.jpg') 0 0/100% 100% no-repeat;
+  }
+
+  ion-button {
+    --background: #e7007f;
+    --color: rgb(255, 255, 255);
+    --border-radius: 10px;
+    --padding-top: 70px;
+    --padding-bottom: 70px;
+    font-style: italic;
+    font-size: 12px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }  
+
+  #containerb {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+  }
+  
+  #containert {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56%;
+  }
+
+  ion-popover {
+    --background: rgba(102, 6, 121, 0.6);
+    --backdrop-opacity: 0.6;
+    --box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    --color: white;
+    --width: 260px;
+  }
+  
+  ion-popover ion-content {
+    --background: rgba(248, 53, 222, 0.6);
+  }
+  
+  ion-popover::part(backdrop) {
+    background-color: rgb(6, 14, 106);
+  }
