@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NewsService } from 'src/app/services/news.service';
+import { environment } from 'src/environments/environment';
+const apiKey = environment.apiKey
 @Component({
   selector: 'app-card',
   templateUrl: './card.page.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPage implements OnInit {
 
-  constructor() { }
+  constructor(private newService: NewsService) { }
 
   ngOnInit() {
+    this.newService.getTopHeadLines()
+    .subscribe(resp => {
+      console.log(resp);
+    });
   }
 
 }

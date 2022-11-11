@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { NewsService } from 'src/app/services/news.service';
+import { environment } from 'src/environments/environment';
+const apiKey = environment.apiKey
 
 @Component({
   selector: 'app-alert',
@@ -11,8 +14,12 @@ export class AlertPage implements OnInit {
 
   //interfaz de los componentes
 
-  constructor(private alertController : AlertController) { }
+  constructor( private newService: NewsService, private alertController : AlertController) { }
   ngOnInit() {
+    this.newService.getTopHeadLines()
+    .subscribe(resp => {
+      console.log(resp.articles);
+    });
   }
   async presentAlert() {
     const alert = await this.alertController.create({
@@ -24,3 +31,4 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 }
+ 
