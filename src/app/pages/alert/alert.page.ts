@@ -9,18 +9,19 @@ const apiKey = environment.apiKey
   templateUrl: './alert.page.html',
   styleUrls: ['./alert.page.scss'],
 })
-export class AlertPage implements OnInit {
 
+export class AlertPage implements OnInit {
 
   //interfaz de los componentes
 
   constructor( private newService: NewsService, private alertController : AlertController) { }
   ngOnInit() {
     this.newService.getTopHeadLines()
-    .subscribe(resp => {
-      console.log(resp.articles);
+    .subscribe(articles => {
+      console.log(articles);
     });
   }
+  
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
