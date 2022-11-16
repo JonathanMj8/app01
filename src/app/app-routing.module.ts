@@ -13,20 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
-  {
     path: 'action-sheet',
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
-  },
-  {
-    path: 'card',
-    loadChildren: () => import('./pages/card/card.module').then( m => m.CardPageModule)
-  },
-  {
-    path: 'componentes',
-    loadChildren: () => import('./pages/componentes/componentes.module').then( m => m.ComponentesPageModule)
   },
   {
     path: 'ionic',
@@ -51,6 +39,10 @@ const routes: Routes = [
   {
     path: 'slider',
     loadChildren: () => import('./pages/slider/slider.module').then( m => m.SliderPageModule)
+  },
+  {
+    path: 'cards',
+    loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
   },
 ];
 
